@@ -32,4 +32,21 @@ export const products = {
         limit: z.number(),
       })
     ),
+  create: oc
+    .route({
+      tags: [PRODUCT],
+      method: "POST",
+      path: "/products",
+    })
+    .input(
+      z.object({
+        name: z.string().min(1),
+        description: z.string(),
+      })
+    )
+    .output(
+      z.object({
+        success: z.boolean(),
+      })
+    ),
 };

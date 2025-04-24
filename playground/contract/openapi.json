@@ -89,6 +89,55 @@
             }
           }
         }
+      },
+      "post": {
+        "operationId": "products.create",
+        "tags": [
+          "Product"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name",
+                  "description"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "success"
+                  ]
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

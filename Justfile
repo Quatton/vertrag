@@ -1,4 +1,7 @@
-gen-axum:
+gen-spec:
+  bun run gen:openapi
+
+gen-axum: gen-spec
   openapi-generator generate \
     --skip-validate-spec \
     -i ./playground/contract/openapi.json \
@@ -8,7 +11,7 @@ gen-axum:
 run-axum:
   cargo run --manifest-path ./playground/rust-axum/server/Cargo.toml
 
-gen-fastapi:
+gen-fastapi: gen-spec
     openapi-generator generate \
         --skip-validate-spec \
         -i ./playground/contract/openapi.json \

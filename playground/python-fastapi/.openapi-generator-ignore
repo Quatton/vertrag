@@ -9,7 +9,4 @@ README.md
 requirements.txt
 setup.cfg
 
-src/openapi/main.py
-src/openapi/__init__.py
-src/openapi_server/impl/__init__.py
 !src/openapi
