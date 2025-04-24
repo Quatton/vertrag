@@ -1,0 +1,17 @@
+{
+  "name": "vertrag-axum",
+  "module": "index.ts",
+  "type": "module",
+  "workspaces": [
+    "app/*"
+  ],
+  "scripts": {
+    "dev": "bun run --filter=app dev",
+    "start": "bun run --filter=app start",
+    "build": "bun run --filter=app build",
+    "serve": "bun run --filter=app serve"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
