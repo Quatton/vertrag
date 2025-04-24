@@ -1,23 +1,23 @@
 {
-  "name": "@vertrag/contract",
-  "type": "module",
-  "scripts": {
-    "gen": "bun run ./scripts/gen.ts",
-    "format": "biome format --write .",
-    "lint": "biome lint",
-    "lint:fix": "biome lint --fix",
-    "lint:unsafe": "biome lint --fix --unsafe"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "dependencies": {
-    "@orpc/contract": "^1.1.0",
-    "@orpc/openapi": "^1.1.0",
-    "@orpc/zod": "^1.1.0",
-    "zod": "^3.24.3"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^1.9.4"
-  }
+	"name": "@vertrag/contract",
+	"type": "module",
+	"scripts": {
+		"gen": "bun run ./scripts/gen.ts",
+		"format": "biome format --write .",
+		"lint": "biome lint",
+		"lint:fix": "biome lint --fix",
+		"lint:unsafe": "biome lint --fix --unsafe"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"dependencies": {
+		"@orpc/contract": "^1.1.0",
+		"@orpc/openapi": "^1.1.0",
+		"@orpc/zod": "^1.1.0",
+		"zod": "^3.24.3"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4"
+	}
 }

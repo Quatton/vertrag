@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "DM Sans Variable", sans-serif;
+	--font-sans: "DM Sans Variable", sans-serif;
 }
 
 body {
-  letter-spacing: -0.1em;
+	letter-spacing: -0.1em;
 }

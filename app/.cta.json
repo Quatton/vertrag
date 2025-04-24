@@ -1,13 +1,13 @@
 {
-  "framework": "react",
-  "projectName": "app",
-  "typescript": true,
-  "tailwind": false,
-  "packageManager": "bun",
-  "toolchain": "none",
-  "mode": "file-router",
-  "git": true,
-  "variableValues": {},
-  "version": 1,
-  "existingAddOns": []
+	"framework": "react",
+	"projectName": "app",
+	"typescript": true,
+	"tailwind": false,
+	"packageManager": "bun",
+	"toolchain": "none",
+	"mode": "file-router",
+	"git": true,
+	"variableValues": {},
+	"version": 1,
+	"existingAddOns": []
 }
