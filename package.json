@@ -1,17 +1,24 @@
 {
   "name": "vertrag-axum",
-  "module": "index.ts",
   "type": "module",
   "workspaces": [
-    "app"
+    "app",
+    "contract"
   ],
   "scripts": {
     "dev": "bun run --filter=@vertrag/app dev",
     "start": "bun run --filter=@vertrag/app start",
     "build": "bun run --filter=@vertrag/app build",
-    "serve": "bun run --filter=@vertrag/app serve"
+    "serve": "bun run --filter=@vertrag/app serve",
+    "format": "bun run --filter=@vertrag/* format ",
+    "lint": "bun run --filter=@vertrag/* lint",
+    "lint:fix": "bun run --filter=@vertrag/* lint:fix",
+    "lint:unsafe": "bun run  --filter=@vertrag/* lint:unsafe"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@biomejs/biome": "^1.9.4"
   }
 }

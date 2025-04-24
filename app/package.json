@@ -7,7 +7,11 @@
     "start": "vite --port 3000",
     "build": "vite build && tsc",
     "serve": "vite preview",
-    "test": "vitest run"
+    "test": "vitest run",
+    "format": "biome format --write .",
+    "lint": "biome lint",
+    "lint:fix": "biome lint --fix",
+    "lint:unsafe": "biome lint --fix --unsafe"
   },
   "dependencies": {
     "@fontsource-variable/dm-sans": "^5.2.5",
