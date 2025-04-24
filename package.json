@@ -3,13 +3,14 @@
   "module": "index.ts",
   "type": "module",
   "workspaces": [
-    "app/*"
+    "app"
   ],
   "scripts": {
-    "dev": "bun run --filter=app dev",
-    "start": "bun run --filter=app start",
-    "build": "bun run --filter=app build",
-    "serve": "bun run --filter=app serve"
+    "dev": "bun run --filter=@vertrag/app dev",
+    "prepare": "bun run --filter=@vertrag/app prepare",
+    "start": "bun run --filter=@vertrag/app start",
+    "build": "bun run --filter=@vertrag/app build",
+    "serve": "bun run --filter=@vertrag/app serve"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
