@@ -3,7 +3,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "prepare": "panda codegen",
     "dev": "vite --port 3000",
     "start": "vite --port 3000",
     "build": "vite build && tsc",
@@ -11,6 +10,7 @@
     "test": "vitest run"
   },
   "dependencies": {
+    "@fontsource-variable/dm-sans": "^5.2.5",
     "@tailwindcss/vite": "^4.1.4",
     "@tanstack/react-router": "^1.114.3",
     "@tanstack/react-router-devtools": "^1.114.3",

@@ -7,7 +7,6 @@
   ],
   "scripts": {
     "dev": "bun run --filter=@vertrag/app dev",
-    "prepare": "bun run --filter=@vertrag/app prepare",
     "start": "bun run --filter=@vertrag/app start",
     "build": "bun run --filter=@vertrag/app build",
     "serve": "bun run --filter=@vertrag/app serve"

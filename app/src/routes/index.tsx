@@ -7,9 +7,11 @@ export const Route = createFileRoute("/")({
 function App() {
   return (
     <main className="flex h-screen w-screen items-center justify-center">
-      <h1>
-        Seamless Handshakes between Client and Server in multiple languages
-      </h1>
+      <section className="max-w-4xl">
+        <h1 className="text-4xl font-semibold text-center">
+          Seamless handshakes between Client and Server <br/> in two different languages
+        </h1>
+      </section>
     </main>
   );
 }
