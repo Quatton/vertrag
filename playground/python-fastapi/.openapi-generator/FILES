@@ -1,0 +1,8 @@
+src/openapi/apis/__init__.py
+src/openapi/apis/product_api.py
+src/openapi/apis/product_api_base.py
+src/openapi/models/__init__.py
+src/openapi/models/extra_models.py
+src/openapi/models/products_list200_response.py
+src/openapi/models/products_list200_response_products_inner.py
+src/openapi/security_api.py

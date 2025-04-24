@@ -4,7 +4,7 @@ from typing import ClassVar, Dict, List, Tuple  # noqa: F401
 
 from pydantic import StrictFloat, StrictInt
 from typing import Optional, Union
-from openapi_server.models.products_list200_response import ProductsList200Response
+from openapi.models.products_list200_response import ProductsList200Response
 
 
 class BaseProductApi:

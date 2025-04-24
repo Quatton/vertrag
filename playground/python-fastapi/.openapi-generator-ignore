@@ -1,8 +1,7 @@
-./**/*
+*
 pyproject.toml
 .flake8
 .gitignore
-tests
 docker-compose.yaml
 Dockerfile
 openapi.yaml
@@ -11,5 +10,6 @@ requirements.txt
 setup.cfg
 
 src/openapi/main.py
-src/openapi/init.py
+src/openapi/__init__.py
+src/openapi_server/impl/__init__.py
 !src/openapi

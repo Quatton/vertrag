@@ -22,7 +22,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictFloat, StrictInt
 from typing import Any, ClassVar, Dict, List, Union
-from openapi_server.models.products_list200_response_products_inner import ProductsList200ResponseProductsInner
+from openapi.models.products_list200_response_products_inner import ProductsList200ResponseProductsInner
 try:
     from typing import Self
 except ImportError:

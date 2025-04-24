@@ -4,7 +4,7 @@ from typing import Dict, List  # noqa: F401
 import importlib
 import pkgutil
 
-from openapi_server.apis.product_api_base import BaseProductApi
+from openapi.apis.product_api_base import BaseProductApi
 import openapi_server.impl
 
 from fastapi import (  # noqa: F401
@@ -22,10 +22,10 @@ from fastapi import (  # noqa: F401
     status,
 )
 
-from openapi_server.models.extra_models import TokenModel  # noqa: F401
+from openapi.models.extra_models import TokenModel  # noqa: F401
 from pydantic import StrictFloat, StrictInt
 from typing import Optional, Union
-from openapi_server.models.products_list200_response import ProductsList200Response
+from openapi.models.products_list200_response import ProductsList200Response
 
 
 router = APIRouter()
