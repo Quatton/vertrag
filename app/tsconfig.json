@@ -32,9 +32,6 @@
       "@/*": [
         "./src/*"
       ],
-      "styled-system/*": [
-        "./styled-system/*"
-      ],
     }
   }
 }

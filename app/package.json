@@ -11,16 +11,15 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@ark-ui/react": "^5.6.0",
+    "@tailwindcss/vite": "^4.1.4",
     "@tanstack/react-router": "^1.114.3",
     "@tanstack/react-router-devtools": "^1.114.3",
     "@tanstack/router-plugin": "^1.114.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.1.4"
   },
   "devDependencies": {
-    "@pandacss/dev": "^0.53.4",
-    "@park-ui/panda-preset": "^0.43.1",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.2.0",
     "@types/react": "^19.0.8",
