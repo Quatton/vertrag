@@ -11,6 +11,7 @@ import { OpenAPILink } from "@orpc/openapi-client/fetch";
 import { contract } from "@contract/routes/root";
 import { createORPCClient } from "@orpc/client";
 import type { JsonifiedClient } from "@orpc/openapi-client";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 export const Route = createRootRoute({
 	component: RootComponent,
@@ -19,6 +20,8 @@ export const Route = createRootRoute({
 const link = new OpenAPILink(contract, {
 	url: "http://localhost:8000",
 });
+
+const queryClient = new QueryClient();
 
 function RootComponent() {
 	const [client] = useState(() =>
@@ -30,8 +33,10 @@ function RootComponent() {
 
 	return (
 		<ORPCContext.Provider value={orpc}>
-			<Outlet />
-			<TanStackRouterDevtools />
+			<QueryClientProvider client={queryClient}>
+				<Outlet />
+				<TanStackRouterDevtools />
+			</QueryClientProvider>
 		</ORPCContext.Provider>
 	);
 }
