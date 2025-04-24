@@ -12,7 +12,8 @@ gen-fastapi:
     openapi-generator generate \
         --skip-validate-spec \
         -i ./playground/contract/openapi.json \
-        -o ./playground/python-fastapi/gen \
+        -o ./playground/python-fastapi \
+        --additional-properties packageName=openapi \
         -g python-fastapi
 
 # Make sure you already have a virtualenv created
