@@ -108,11 +108,18 @@
                   },
                   "description": {
                     "type": "string"
+                  },
+                  "price": {
+                    "type": "number"
+                  },
+                  "discountedPrice": {
+                    "type": "number"
                   }
                 },
                 "required": [
                   "name",
-                  "description"
+                  "description",
+                  "price"
                 ]
               }
             }

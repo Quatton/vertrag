@@ -20,8 +20,8 @@ import json
 
 
 
-from pydantic import BaseModel, ConfigDict, Field, StrictStr
-from typing import Any, ClassVar, Dict, List
+from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt, StrictStr
+from typing import Any, ClassVar, Dict, List, Optional, Union
 from typing_extensions import Annotated
 try:
     from typing import Self
@@ -34,7 +34,9 @@ class ProductsCreateRequest(BaseModel):
     """ # noqa: E501
     name: Annotated[str, Field(min_length=1, strict=True)]
     description: StrictStr
-    __properties: ClassVar[List[str]] = ["name", "description"]
+    price: Union[StrictFloat, StrictInt]
+    discounted_price: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="discountedPrice")
+    __properties: ClassVar[List[str]] = ["name", "description", "price", "discountedPrice"]
 
     model_config = {
         "populate_by_name": True,
@@ -86,7 +88,9 @@ class ProductsCreateRequest(BaseModel):
 
         _obj = cls.model_validate({
             "name": obj.get("name"),
-            "description": obj.get("description")
+            "description": obj.get("description"),
+            "price": obj.get("price"),
+            "discountedPrice": obj.get("discountedPrice")
         })
         return _obj
 

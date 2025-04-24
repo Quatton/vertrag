@@ -42,6 +42,8 @@ export const products = {
       z.object({
         name: z.string().min(1),
         description: z.string(),
+        price: z.number(),
+        discountedPrice: z.number().optional(),
       })
     )
     .output(

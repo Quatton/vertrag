@@ -19,12 +19,14 @@ class ProductApi(BaseProductApi):
     ) -> ProductsCreate200Response:
         database.append(
             Product(
-                id=len(database),
+                id=str(len(database)),
                 name=products_create_request.name,
                 description=products_create_request.description,
-                price=10.0,
+                price=products_create_request.price,
+                discountedPrice=products_create_request.discounted_price,
             )
         )
+        return ProductsCreate200Response(success=True)
 
     async def products_list(
         self,
