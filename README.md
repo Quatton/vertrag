@@ -80,7 +80,8 @@ We have the following frameworks available:
 
 ## What I'm gonna do with this?
 
-- OpenAPI Generator kinda gives you too little control over the generated code. I don't quite like its naming conventions. Maybe I might build a custom generator for it.
+- OpenAPI Generator kinda gives you too little control over the generated code. I don't quite like its naming conventions. Maybe I might build a custom generator for it. 
+  - Also it generates the entire server. I just need routes and models.
 - Database and Auth.
 - Generate oRPC contracts, but this work might be a direct contribution to oRPC instead of a separate project.
 
