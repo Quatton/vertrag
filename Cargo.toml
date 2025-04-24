@@ -1,5 +1,5 @@
 [workspace]
-members = ["backend/gen", "backend/server"]
+members = ["playground/rust-axum/*"]
 resolver = "3"
 
 [workspace.package]

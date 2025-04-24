@@ -2,8 +2,7 @@
   "name": "vertrag-axum",
   "type": "module",
   "workspaces": [
-    "app",
-    "contract"
+    "playground/*"
   ],
   "scripts": {
     "dev": "bun run --filter=@vertrag/app dev",
@@ -14,8 +13,7 @@
     "lint": "bun run --filter=@vertrag/* lint",
     "lint:fix": "bun run --filter=@vertrag/* lint:fix",
     "lint:unsafe": "bun run  --filter=@vertrag/* lint:unsafe",
-    "gen:openapi": "bun run --filter=@vertrag/contract gen",
-    "gen:server": "bun run gen:openapi && openapi-generator generate -i ./contract/openapi.json -g rust-axum -o ./backend/gen"
+    "gen:openapi": "bun run --filter=@vertrag/contract gen"
   },
   "devDependencies": {
     "@types/bun": "latest",

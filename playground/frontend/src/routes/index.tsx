@@ -27,10 +27,14 @@ function App() {
 				<h2 className="text-center font-semibold text-2xl">Products</h2>
 				{data?.products.map((product) => (
 					<div key={product.id} className="flex flex-col gap-2">
-						{/* biome-ignore lint/nursery/useSortedClasses: <explanation> */}
-						<h3 className="text-lg font-semibold">{product.name}</h3>
+						<h3 className="font-semibold text-lg">{product.name}</h3>
 						<p>{product.description}</p>
 						<p>${product.price}</p>
+						{product.discountedPrice ? (
+							<p className="text-red-500">
+								Discounted Price: ${product.discountedPrice}
+							</p>
+						) : null}
 					</div>
 				))}
 				{error ? (

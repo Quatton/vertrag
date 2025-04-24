@@ -193,6 +193,10 @@ pub struct ProductsList200ResponseProductsInner {
     #[serde(rename = "price")]
     pub price: f64,
 
+    #[serde(rename = "discountedPrice")]
+    #[serde(skip_serializing_if="Option::is_none")]
+    pub discounted_price: Option<f64>,
+
 }
 
 
@@ -207,6 +211,7 @@ impl ProductsList200ResponseProductsInner {
             name,
             description,
             price,
+            discounted_price: None,
         }
     }
 }
@@ -233,6 +238,14 @@ impl std::fmt::Display for ProductsList200ResponseProductsInner {
             Some("price".to_string()),
             Some(self.price.to_string()),
 
+
+            self.discounted_price.as_ref().map(|discounted_price| {
+                [
+                    "discountedPrice".to_string(),
+                    discounted_price.to_string(),
+                ].join(",")
+            }),
+
         ];
 
         write!(f, "{}", params.into_iter().flatten().collect::<Vec<_>>().join(","))
@@ -254,6 +267,7 @@ impl std::str::FromStr for ProductsList200ResponseProductsInner {
             pub name: Vec<String>,
             pub description: Vec<String>,
             pub price: Vec<f64>,
+            pub discounted_price: Vec<f64>,
         }
 
         let mut intermediate_rep = IntermediateRep::default();
@@ -279,6 +293,8 @@ impl std::str::FromStr for ProductsList200ResponseProductsInner {
                     "description" => intermediate_rep.description.push(<String as std::str::FromStr>::from_str(val).map_err(|x| x.to_string())?),
                     #[allow(clippy::redundant_clone)]
                     "price" => intermediate_rep.price.push(<f64 as std::str::FromStr>::from_str(val).map_err(|x| x.to_string())?),
+                    #[allow(clippy::redundant_clone)]
+                    "discountedPrice" => intermediate_rep.discounted_price.push(<f64 as std::str::FromStr>::from_str(val).map_err(|x| x.to_string())?),
                     _ => return std::result::Result::Err("Unexpected key while parsing ProductsList200ResponseProductsInner".to_string())
                 }
             }
@@ -293,6 +309,7 @@ impl std::str::FromStr for ProductsList200ResponseProductsInner {
             name: intermediate_rep.name.into_iter().next().ok_or_else(|| "name missing in ProductsList200ResponseProductsInner".to_string())?,
             description: intermediate_rep.description.into_iter().next().ok_or_else(|| "description missing in ProductsList200ResponseProductsInner".to_string())?,
             price: intermediate_rep.price.into_iter().next().ok_or_else(|| "price missing in ProductsList200ResponseProductsInner".to_string())?,
+            discounted_price: intermediate_rep.discounted_price.into_iter().next(),
         })
     }
 }

@@ -8,7 +8,7 @@ use axum_extra::extract::{CookieJar, Host};
 use openapi::{
     apis::{
         ErrorHandler,
-        default::{Default, ProductsPeriodListResponse},
+        product::{Product, ProductsPeriodListResponse},
     },
     models,
 };
@@ -23,7 +23,7 @@ impl AsRef<ApiImpl> for ApiImpl {
 }
 
 #[async_trait]
-impl Default for ApiImpl {
+impl Product for ApiImpl {
     async fn products_period_list(
         &self,
         _method: &Method,
@@ -39,12 +39,14 @@ impl Default for ApiImpl {
                         name: "Product 1".to_string(),
                         price: 10.0,
                         description: "Description of Product 1".to_string(),
+                        discounted_price: Some(8.0),
                     },
                     models::ProductsList200ResponseProductsInner {
                         id: 2.to_string(),
                         name: "Product 2".to_string(),
                         price: 20.0,
                         description: "Description of Product 2".to_string(),
+                        discounted_price: Some(15.0),
                     },
                 ],
                 limit: 10.0,
