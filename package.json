@@ -14,7 +14,8 @@
     "lint": "bun run --filter=@vertrag/* lint",
     "lint:fix": "bun run --filter=@vertrag/* lint:fix",
     "lint:unsafe": "bun run  --filter=@vertrag/* lint:unsafe",
-    "gen:server": "bun run --filter=@vertrag/contract gen && openapi-generator generate -i ./contract/openapi.json -g rust-axum -o ./server/gen"
+    "gen:openapi": "bun run --filter=@vertrag/contract gen",
+    "gen:server": "bun run gen:openapi && openapi-generator generate -i ./contract/openapi.json -g rust-axum -o ./backend/gen"
   },
   "devDependencies": {
     "@types/bun": "latest",
