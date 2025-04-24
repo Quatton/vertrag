@@ -8,9 +8,12 @@ export const Product = z.object({
   price: z.number(),
 });
 
+const PRODUCT = "Product";
+
 export const products = {
   list: oc
     .route({
+      tags: [PRODUCT],
       method: "GET",
       path: "/products",
     })

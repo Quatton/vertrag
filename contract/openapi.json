@@ -8,6 +8,9 @@
     "/products": {
       "get": {
         "operationId": "products.list",
+        "tags": [
+          "Product"
+        ],
         "parameters": [
           {
             "name": "page",
