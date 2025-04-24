@@ -59,8 +59,7 @@
                           "name",
                           "description",
                           "price"
-                        ],
-                        "$anchor": "Product"
+                        ]
                       }
                     },
                     "total": {

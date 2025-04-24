@@ -1,0 +1,8 @@
+[workspace]
+name = "vertrag-axum"
+version = "0.1.0"
+edition = "2024"
+members = ["backend/gen", "backend/server"]
+
+[dependencies]
+gen = { path = "backend/gen" }
