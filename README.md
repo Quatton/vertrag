@@ -68,6 +68,7 @@ A script runner at the root of the project. You don't really need it, but it mak
 
 We have the following frameworks available:
 - `axum` (Rust)
+- `fastapi` (Python)
 
 ## Features
 
